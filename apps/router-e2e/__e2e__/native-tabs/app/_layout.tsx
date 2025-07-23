@@ -42,14 +42,14 @@ export default function Layout() {
           <Icon.Drawable name="ic_lock_open" />
           <Label>Face Gallery</Label>
         </NativeTabs.Trigger>
-        <NativeTabs.Trigger name="four">
+        <NativeTabs.Trigger name="explore">
           <Icon src={require('../../../assets/explore_gray.png')} />
           <Icon src={require('../../../assets/explore_orange.png')} useAsSelected />
           {/* <Icon.SF name="safari.fill" />
           <Icon.SF name="safari.fill" useAsSelected /> */}
           <Icon.Drawable name="ic_search" />
           <Badge>9+</Badge>
-          <Label>Discover</Label>
+          <Label>Explore</Label>
         </NativeTabs.Trigger>
       </NativeTabs>
     </ThemeProvider>
