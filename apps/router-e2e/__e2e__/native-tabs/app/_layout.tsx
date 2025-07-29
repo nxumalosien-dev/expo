@@ -2,7 +2,9 @@ import { ThemeProvider, DarkTheme } from '@react-navigation/native';
 import { Badge, Icon, Label, NativeTabs } from 'expo-router/unstable-native-tabs';
 import { Appearance, Platform } from 'react-native';
 
-Appearance.setColorScheme('dark');
+if (process.env.EXPO_OS !== 'web') {
+  Appearance.setColorScheme('dark');
+}
 
 export default function Layout() {
   return (
