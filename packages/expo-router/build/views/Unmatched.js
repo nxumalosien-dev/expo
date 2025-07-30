@@ -11,7 +11,9 @@ const expo_linking_1 = require("expo-linking");
 const react_1 = __importDefault(require("react"));
 const react_native_1 = require("react-native");
 const hooks_1 = require("../hooks");
-const Link_1 = require("../link/Link");
+const NoSSR_1 = require("./NoSSR");
+// Importing BaseExpoRouterLink to prevent circular dependency issues
+const BaseExpoRouterLink_1 = require("../link/BaseExpoRouterLink");
 const useNavigation_1 = require("../useNavigation");
 const useSafeLayoutEffect_1 = require("./useSafeLayoutEffect");
 const stack_1 = require("../utils/stack");
@@ -22,6 +24,13 @@ const Pressable_1 = require("../views/Pressable");
  * @hidden
  */
 function Unmatched() {
+    // Following the https://github.com/expo/expo/blob/ubax/router/move-404-and-sitemap-to-root/packages/expo-router/src/getRoutesSSR.ts#L51
+    // we need to ensure that the Unmatched component is not rendered on the server.
+    return (<NoSSR_1.NoSSR>
+      <UnmatchedInner />
+    </NoSSR_1.NoSSR>);
+}
+function UnmatchedInner() {
     const [render, setRender] = react_1.default.useState(false);
     const router = (0, hooks_1.useRouter)();
     const route = (0, native_1.useRoute)();
@@ -47,7 +56,7 @@ function Unmatched() {
       <react_native_1.Text role="heading" aria-level={2} style={[styles.subtitle, styles.secondaryText]}>
         Page could not be found.
       </react_native_1.Text>
-      {render ? (<Link_1.Link href={pathname} replace {...react_native_1.Platform.select({ native: { asChild: true } })}>
+      {render ? (<BaseExpoRouterLink_1.BaseExpoRouterLink href={pathname} replace {...react_native_1.Platform.select({ native: { asChild: true } })}>
           <Pressable_1.Pressable>
             {({ hovered, pressed }) => (<react_native_1.Text style={[
                     styles.pageLink,
@@ -69,7 +78,7 @@ function Unmatched() {
                 {url}
               </react_native_1.Text>)}
           </Pressable_1.Pressable>
-        </Link_1.Link>) : (<react_native_1.View style={[styles.pageLink, styles.placeholder]}/>)}
+        </BaseExpoRouterLink_1.BaseExpoRouterLink>) : (<react_native_1.View style={[styles.pageLink, styles.placeholder]}/>)}
       <react_native_1.View style={styles.linkContainer}>
         <Pressable_1.Pressable>
           {({ hovered, pressed }) => (<react_native_1.Text onPress={() => {
@@ -99,7 +108,7 @@ function Unmatched() {
             </react_native_1.Text>)}
         </Pressable_1.Pressable>
         <react_native_1.Text style={[styles.linkSeparator, styles.secondaryText]}>•</react_native_1.Text>
-        <Link_1.Link href="/_sitemap" replace {...react_native_1.Platform.select({ native: { asChild: true } })}>
+        <BaseExpoRouterLink_1.BaseExpoRouterLink href="/_sitemap" replace {...react_native_1.Platform.select({ native: { asChild: true } })}>
           <Pressable_1.Pressable>
             {({ hovered, pressed }) => (<react_native_1.Text style={[
                 styles.link,
@@ -120,7 +129,7 @@ function Unmatched() {
                 Sitemap
               </react_native_1.Text>)}
           </Pressable_1.Pressable>
-        </Link_1.Link>
+        </BaseExpoRouterLink_1.BaseExpoRouterLink>
       </react_native_1.View>
     </react_native_1.View>);
 }

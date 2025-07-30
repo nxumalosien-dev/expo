@@ -7,7 +7,9 @@ import React from 'react';
 import { StyleSheet, Text, View, Platform, Image } from 'react-native';
 
 import { usePathname, useRouter } from '../hooks';
-import { Link } from '../link/Link';
+import { NoSSR } from './NoSSR';
+// Importing BaseExpoRouterLink to prevent circular dependency issues
+import { BaseExpoRouterLink as Link } from '../link/BaseExpoRouterLink';
 import { useNavigation } from '../useNavigation';
 import { useSafeLayoutEffect } from './useSafeLayoutEffect';
 import { isRoutePreloadedInStack } from '../utils/stack';
@@ -19,6 +21,16 @@ import { Pressable } from '../views/Pressable';
  * @hidden
  */
 export function Unmatched() {
+  // Following the https://github.com/expo/expo/blob/ubax/router/move-404-and-sitemap-to-root/packages/expo-router/src/getRoutesSSR.ts#L51
+  // we need to ensure that the Unmatched component is not rendered on the server.
+  return (
+    <NoSSR>
+      <UnmatchedInner />
+    </NoSSR>
+  );
+}
+
+function UnmatchedInner() {
   const [render, setRender] = React.useState(false);
 
   const router = useRouter();
