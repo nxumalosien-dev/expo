@@ -4318,7 +4318,7 @@ SPEC CHECKSUMS:
   EXApplication: 2da4660569e086f4f18722758b52d7e7792631ab
   EXAV: 0809cbb31eba2111d5413f2dbb547ba9727478ee
   EXConstants: 72e8e04dc4d7d97c74a618d44753ea4a7437a2b6
-  EXImageLoader: ab4fcf9240cf3636a83c00e3fc5229d692899428
+  EXImageLoader: d2b81b29509ee86ad8bdf0d2cc9ff5d86051d68b
   EXJSONUtils: 1d3e4590438c3ee593684186007028a14b3686cd
   EXManifests: bf76658edfbfa3e3fb67f940ade98d7803490789
   EXNotifications: f0f1c97d04f06c51ea073d7b2396431e5611c1ea
@@ -4327,7 +4327,7 @@ SPEC CHECKSUMS:
   ExpoAsset: b5bfc6425d1e9a09e8e1368646b98fe5ae7ed074
   ExpoAudio: f6bcc6868e643e6fa74b6e20fd7d20ecc89b4e28
   ExpoBackgroundFetch: 76c48b3cd9a4ee46e5267614a30fac804de6f33e
-  ExpoBackgroundTask: 9296d983f3d612359419e015ded65ebe9de30ba2
+  ExpoBackgroundTask: 63e54818a257ad36aeff7e04ef67598e68c18fbb
   ExpoBattery: 6229d981d12dffb00c9e8e48181162729febb541
   ExpoBlur: 5d95f7ca771a0f3b9618466525dd68e46dc95f3a
   ExpoBrightness: 05e750736f8886dcf235212b0caf85b0f605fc88
@@ -4346,7 +4346,7 @@ SPEC CHECKSUMS:
   ExpoHaptics: 581bbb680c566b8afef68fd50f1efb883972b150
   ExpoHead: 94585b2fec8aea34aff1372910f1b47917727173
   ExpoImage: 736d4bf4e14437d0e0c7dafdd3aa169c17d447a7
-  ExpoImageManipulator: 8d088059bf4f6287edb451925cc280b0d12b7627
+  ExpoImageManipulator: d889b5a58e217657dd5ef4fbc23441f2be12463e
   ExpoImagePicker: 235489a513df4c70c402f2a49a47fdd94053d63d
   ExpoKeepAwake: 95037f8576ba678db79cbf558b933400c81997a7
   ExpoLinearGradient: 110244a240361e3351756225e5fcc4c6c07f5431
@@ -4375,10 +4375,10 @@ SPEC CHECKSUMS:
   ExpoSystemUI: b9294916cc916a704d21c8bb745d6e27871fdbb7
   ExpoTrackingTransparency: 37880a2e6f317c938f1b50cd05c094571e317ba5
   ExpoVideo: 0e9cd59d0bd301e0f33a8fa7b0e3f1a497f60f81
-  ExpoVideoThumbnails: 1381bba1a0ef61c80d6f3eae6e0ffcc198de648b
+  ExpoVideoThumbnails: 78229366987270a271cd57e2cda857003e32ebda
   ExpoWebBrowser: 41dc1db6ed9185a3b80a9f917ba3c62dafd22eec
   EXStructuredHeaders: 1c799cb91e8057e0671610635e5b2109fa295114
-  EXTaskManager: 0128b9f39a088b0c762d8d1c42017e6d44200b29
+  EXTaskManager: d767bbb4ea832f4b7781244bcc8e01c94d27aa60
   EXUpdates: d7205503b033ad6f48ea2702a234db55c0ec45a5
   EXUpdatesInterface: d6c802a2d1d11867523d03a95397957f9ba3d1c7
   fast_float: b32c788ed9c6a8c584d114d0047beda9664e7cc6
@@ -4508,7 +4508,7 @@ SPEC CHECKSUMS:
   StripePaymentSheet: f4f5b71cef665f05a185c29b2d4b59e7dd8c117d
   StripePaymentsUI: d489e73bf790da1c74e642021475b1a09a4a4500
   StripeUICore: 723e5024c83acb5ba5e71335e110a471b182a74d
-  UMAppLoader: 55159b69750129faa7a51c493cb8ea55a7b64eb9
+  UMAppLoader: 90857e24b6b31ef0c87ade0688c6c4ca08d6201b
   Yoga: 15c07d37869e68f295849c2af164cea21957f345
   ZXingObjC: 8898711ab495761b2dbbdec76d90164a6d7e14c5
 
